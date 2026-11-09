@@ -3,24 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título de mi Página</title>
+    <title>TFG - Marta Pavón Muñoz</title>
     <style>
-        body {
-            background-color: pink; /* Fondo rosa */
-            color: white;           /* Texto en blanco */
-            font-family: Arial, sans-serif;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
-        /* Contenedor responsivo para el vídeo */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #fcf8f9;
+            color: #111111;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Encabezado estilo Stradivarius */
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .badge-pink {
+            background-color: #f7d6e0;
+            color: #8c2647;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* Contenido principal */
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        .hero-card {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 40px;
+            border-left: 4px solid #f7d6e0;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #666666;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        .badge-tfg {
+            display: inline-block;
+            background-color: #111111;
+            color: #ffffff;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #444444;
+            max-width: 600px;
+            margin-bottom: 24px;
+        }
+
+        /* Sección de Vídeo */
+        .video-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .video-section h3 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #111111;
+        }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+            padding-bottom: 56.25%; /* 16:9 */
             height: 0;
             overflow: hidden;
-            max-width: 100%;
-            margin-top: 30px;
+            border-radius: 6px;
         }
 
         .video-container iframe {
@@ -31,23 +137,52 @@
             height: 100%;
             border: 0;
         }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 12px;
+            color: #888888;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-top: 1px solid #eaeaea;
+            background-color: #ffffff;
+            margin-top: 60px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>¡Hola, mundo!</h1>
-    <h2>Marta Pavón Muñoz</h2>
-    <p>Este es el contenido visible de mi sitio web.</p>
+    <header>
+        <div class="logo">Stradivarius Style</div>
+        <div class="badge-pink">TFG 2026</div>
+    </header>
 
-    <!-- Vídeo incrustado al final -->
-    <div class="video-container">
-        <iframe 
-            src="https://www.youtube.com/embed/RtWGVlo-HzU" 
-            title="Reproductor de vídeo de YouTube" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen>
-        </iframe>
-    </div>
+    <main>
+        <section class="hero-card">
+            <span class="badge-tfg">PROYECTO ACADÉMICO</span>
+            <h1>¡Hola, mundo!</h1>
+            <h2>Marta Pavón Muñoz</h2>
+            <p>Este es el contenido visible de mi sitio web creado para la presentación de mi Trabajo de Fin de Grado.</p>
+        </section>
+
+        <section class="video-section">
+            <h3>Contenido Multimedia</h3>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/RtWGVlo-HzU" 
+                    title="Reproductor de vídeo de YouTube" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 Marta Pavón Muñoz — Todos los derechos reservados
+    </footer>
 
 </body>
 </html>
